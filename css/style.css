@@ -1,18 +1,22 @@
 body {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAElJREFUKFNjZCASMILU/fr16z+IZmNjA/NhAFkcrhBdEbJikByKCTDTQRIg05A1Y1iFy2QME9GthPGxmohuLUgxaZ4hOniICXMA/6U4CzEdf54AAAAASUVORK5CYII=
-  ) repeat;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAElJREFUKFNjZCASMILU/fr16z+IZmNjA/NhAFkcrhBdEbJikByKCTDTQRIg05A1Y1iFy2QME9GthPGxmohuLUgxaZ4hOniICXMA/6U4CzEdf54AAAAASUVORK5CYII=) repeat;
   font-family: 'Montserrat', sans-serif;
+}
 
-  #slider {
-    width: 600px;
-    height: 400px;
-    overflow: hidden;
-  }
-  .slide {
-    width: 600px;
-    height: 400px;
-    float: left;
-  }
+/* Slider styles moved outside of body */
+#slider {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+}
+
+.slide {
+  width: 100%;
+  height: auto;
+  display: none;
 }
 
 h1 {
@@ -195,6 +199,34 @@ flex: 50%;
   margin: auto;
 }
 
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
@@ -222,5 +254,71 @@ flex: 50%;
   to {opacity: 1}
 }
 
+/* Image grid and expanded image styling */
+.image-grid-container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
 
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  max-height: 350px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
 
+.image-grid img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.expanded-image-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.expanded-image-container img {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.close-btn:hover {
+  color: #f0f0f0;
+}

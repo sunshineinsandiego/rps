@@ -60,9 +60,6 @@
       <div class="slide"><img src="./img/rwenzoris/IMG_7128_2.jpg" style="width:100%"></div>
       
       <div class="slide"><img src="./img/rwenzoris/IMG_7160_2.jpg" style="width:100%"></div>
-      
-      <a class="prev" onclick="plusSlides(-1)">❮</a>
-      <a class="next" onclick="plusSlides(1)">❯</a>
     </div>
     <br>
     
@@ -334,9 +331,23 @@
     <section id="projects">
       <h2>Projects</h2>
       <h3>Refuse Collection and Recycling</h3>
-      <img src="./img/portersontrail.jpg" alt="Garbage Collection." style="height:100%">
+      <!--<img src="./img/portersontrail.jpg" alt="Garbage Collection." style="height:100%">-->
+      <div class="image-grid-container">
+        <div class="image-grid">
+          <img src="./img/trash/portersontrail.jpg" alt="Trash Collection 1" onclick="expandImage(this)">
+          <img src="./img/trash/trash1.jpg" alt="Trash Collection 1" onclick="expandImage(this)">
+          <img src="./img/trash/trash2.jpg" alt="Trash Collection 2" onclick="expandImage(this)">
+          <img src="./img/trash/trash3.jpg" alt="Trash Collection 3" onclick="expandImage(this)">
+          <img src="./img/trash/trash4.jpg" alt="Trash Collection 4" onclick="expandImage(this)">
+          <img src="./img/trash/trash5.jpg" alt="Trash Collection 5" onclick="expandImage(this)">
+        </div>
+        <div id="expanded-image-container" class="expanded-image-container">
+          <span class="close-btn" onclick="closeExpandedImage()">&times;</span>
+          <img id="expanded-image" src="" alt="Expanded Image">
+        </div>
+      </div>
       <p>
-        The porters of Ekitunga Ekikalinda Omusithu we Rwenzori have pledged to document their refuse collection and recycling efforts while on expedition in the mountains. Each kilogram of collected refuse is brought off the mountain and verified by Bwambale Rogers and Baluku Denis Limbali. These collection amounts are then validated by the support staff, and a small stipend based on the weight and piece-count of the collected refuse is paid directly via electronic remittance to the members for their efforts.
+        The porters of Ekitunga Ekikalinda Omusithu we Rwenzori have pledged to document their refuse collection and recycling efforts while on expedition in the mountains. Each kilogram of collected refuse is brought off the mountain and verified by Bwambale Rogers and Baluku Denis Limbali. These collection amounts are then validated by the support staff, and a small stipend based on the weight and piece-count of the collected refuse is paid directly via electronic remittance to the porters for their efforts.
       </p>
 
     </section>
@@ -346,7 +357,7 @@
           To donate, volunteer, or learn more about the Rwenzori Preservation Society, please contact us at:
         </p>
         <p>
-          <a href="mailto:rwandapreservationsociety@rps.org">RwandaPreservationSociety@rps.org</a>
+          <a href="mailto:rwenzoripreservationsociety@rps.org">RwenzoriPreservationSociety@rps.org</a>
         </p>
         <!--
         <p>
