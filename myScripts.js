@@ -53,12 +53,12 @@ function expandImage(img) {
 function closeExpandedImage() {
   const expandedContainer = document.getElementById('expanded-image-container');
   expandedContainer.style.display = 'none';
-  
-  // Re-enable scrolling
   document.body.style.overflow = 'auto';
-  
-  // Remove escape key listener
   document.removeEventListener('keydown', closeOnEscape);
+  expandedContainer.innerHTML = `
+    <span class="close-btn" onclick="closeExpandedImage()">&times;</span>
+    <img id="expanded-image" src="" alt="Expanded Image">
+  `;
 }
 
 function closeOnEscape(e) {
@@ -78,3 +78,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+function expandVideo(videoSrc) {
+  const expandedContainer = document.getElementById('expanded-image-container');
+  const expandedImage = document.getElementById('expanded-image');
+  
+  expandedImage.outerHTML = `<video id="expanded-image" controls autoplay>
+                                <source src="${videoSrc}" type="video/mp4">
+                                Your browser does not support the video tag.
+                              </video>`;
+  expandedContainer.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  document.addEventListener('keydown', closeOnEscape);
+}
