@@ -43,45 +43,28 @@
       <h1>Rwenzori Preservation Society</h1>
       <h2><i>Ekitunga Ekikalinda Omusithu we Rwenzori</i></h2>
     </section>
- 
-    <div id="slider">
-      <div class="slide"><img src="./img/rwenzoris/MG7180.jpg" style="width:100%"></div>
-      <div class="slide"><img src="./img/rwenzoris/MG7189.jpg" style="width:100%"></div>
-      <div class="slide"><img src="./img/rwenzoris/MG7205.jpg" style="width:100%"></div>
-      
-      <div class="slide"><img src="./img/rwenzoris/MG7258.jpg" style="width:100%"></div>
-      <div class="slide"><img src="./img/rwenzoris/MG7260.jpg" style="width:100%"></div>
-      
-      <div class="slide"><img src="./img/rwenzoris/IMG6947.jpg" style="width:100%"></div>
-      <div class="slide"><img src="./img/rwenzoris/IMG70262.jpg" style="width:100%"></div>
-      <div class="slide"><img src="./img/rwenzoris/IMG7044.jpg" style="width:100%"></div>
-      <div class="slide"><img src="./img/rwenzoris/IMG7076.jpeg" style="width:100%"></div>
-      <div class="slide"><img src="./img/rwenzoris/IMG70882.jpg" style="width:100%"></div>
-      <div class="slide"><img src="./img/rwenzoris/IMG71282.jpg" style="width:100%"></div>
-      
-      <div class="slide"><img src="./img/rwenzoris/IMG71602.jpg" style="width:100%"></div>
-    </div>
+    <div class="image-grid-container">
+        <div class="image-grid">
+          <img src="./img/rwenzoris/MG7180.jpg" alt="Trash Collection 1" onclick="expandImage(this)">
+          <img src="./img/rwenzoris/MG7189.jpg" alt="Trash Collection 1" onclick="expandImage(this)">
+          <img src="./img/rwenzoris/MG7205.jpg" alt="Trash Collection 2" onclick="expandImage(this)">
+          <img src="./img/rwenzoris/MG7258.jpg" alt="Trash Collection 3" onclick="expandImage(this)">
+          <img src="./img/rwenzoris/MG7260.jpg" alt="Trash Collection 4" onclick="expandImage(this)">
+          <img src="./img/rwenzoris/IMG6947.jpg" alt="Trash Collection 5" onclick="expandImage(this)">
+          <img src="./img/rwenzoris/IMG70262.jpg" alt="Trash Collection 6" onclick="expandImage(this)">
+          <img src="./img/rwenzoris/IMG7044.jpg" alt="Trash Collection 7" onclick="expandImage(this)">
+          <img src="./img/rwenzoris/IMG7076.jpeg" alt="Trash Collection 8" onclick="expandImage(this)">
+          <img src="./img/rwenzoris/IMG70882.jpg" alt="Trash Collection 9" onclick="expandImage(this)">
+          <img src="./img/rwenzoris/IMG71282.jpg" alt="Trash Collection 10" onclick="expandImage(this)">
+          <img src="./img/rwenzoris/IMG71602.jpg" alt="Trash Collection 11" onclick="expandImage(this)">
+        </div>
+        <div id="expanded-image-container" class="expanded-image-container">
+          <span class="close-btn" onclick="closeExpandedImage()">&times;</span>
+          <img id="expanded-image" src="" alt="Expanded Image">
+        </div>
+      </div>
     <br>
     
-    <div style="text-align:left ">
-      <span class="dot" onclick="currentSlide(1)"></span> 
-      <span class="dot" onclick="currentSlide(2)"></span> 
-      <span class="dot" onclick="currentSlide(3)"></span>
-      
-      <span class="dot" onclick="currentSlide(4)"></span>
-      <span class="dot" onclick="currentSlide(5)"></span>
-      
-      <span class="dot" onclick="currentSlide(6)"></span>
-      <span class="dot" onclick="currentSlide(7)"></span>
-      <span class="dot" onclick="currentSlide(8)"></span>
-      <span class="dot" onclick="currentSlide(9)"></span>
-      <span class="dot" onclick="currentSlide(10)"></span>
-      <span class="dot" onclick="currentSlide(11)"></span>
-      
-      <span class="dot" onclick="currentSlide(12)"></span> 
-      
-    </div>
-
     <section id="template">
       <h2>About</h2>
       <p>
